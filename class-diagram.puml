@@ -1,0 +1,97 @@
+@startuml Academic Control System
+
+' Enums
+enum StudentStatus {
+  ENROLLED
+  LOCKED
+  GRADUATED
+  DROPPED_OUT
+}
+
+enum Qualification {
+  GRADUATION
+  SPECIALIZATION
+  MASTERS
+  DOCTORATE
+}
+
+' Classes
+class Course {
+  -Long id
+  -String code
+  -String description
+  +Professor coordinator
+}
+
+class Professor {
+  -Long id
+  -String name
+  -String address
+  -String phone
+  -Qualification maxQualification
+}
+
+class Discipline {
+  -Long id
+  -String code
+  -String description
+  -Integer workloadHours
+  -String syllabus
+  -String bibliography
+}
+
+class Student {
+  -Long id
+  -String registrationNumber
+  -String name
+  -String address
+  -String phone
+  -StudentStatus status
+}
+
+class ClassOffering {
+  -Long id
+  -Integer year
+  -Integer semester
+  -String weekDays
+  -String schedule
+}
+
+class Enrollment {
+  -Long id
+  -Double firstPartialGrade
+  -Double secondPartialGrade
+  -Double finalExamGrade
+  -Integer attendancePercentage
+  -Boolean approved
+  +Double calculatePartialAverage()
+  +Double calculateFinalAverage()
+  +Boolean isApproved()
+}
+
+' Relationships
+Course "1" *-- "many" Discipline : contains >
+Course "1" *-- "many" Student : enrolls >
+Course "many" -- "many" Professor : teaches in >
+
+Professor "1" -- "many" Course : coordinates >
+Professor "1" -- "many" ClassOffering : teaches >
+
+Discipline "1" *-- "many" ClassOffering : offers >
+Discipline "many" -- "many" Discipline : prerequisite for >
+
+Student "1" -- "many" Enrollment : has >
+Student "many" -- "1" Course : enrolled in >
+
+ClassOffering "1" *-- "many" Enrollment : contains >
+ClassOffering "many" -- "1" Discipline : of >
+ClassOffering "many" -- "1" Professor : taught by >
+
+Enrollment "many" -- "1" Student : belongs to >
+Enrollment "many" -- "1" ClassOffering : part of >
+
+' Enum relationships
+Student -- StudentStatus
+Professor -- Qualification
+
+@enduml
