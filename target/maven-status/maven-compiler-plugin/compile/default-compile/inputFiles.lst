@@ -19,11 +19,14 @@
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/repository/EnrollmentRepository.java
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/model/Enrollment.java
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/enums/StudentStatus.java
+/home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/controller/EvaluationController.java
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/repository/DisciplineRepository.java
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/controller/DisciplineController.java
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/model/Professor.java
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/service/ProfessorService.java
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/controller/ClassOfferingController.java
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/service/ClassOfferingService.java
+/home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/controller/ReportController.java
+/home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/config/WebConfig.java
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/controller/StudentController.java
 /home/henrique/Área de Trabalho/a3_modelagem/src/main/java/com/university/academic/controller/CourseController.java

@@ -10,6 +10,7 @@ com/university/academic/service/CourseService.class
 com/university/academic/repository/DisciplineRepository.class
 com/university/academic/service/ProfessorService.class
 com/university/academic/repository/ProfessorRepository.class
+com/university/academic/config/WebConfig.class
 com/university/academic/model/Professor.class
 com/university/academic/controller/StudentController.class
 com/university/academic/exception/GlobalExceptionHandler$ErrorResponse.class
@@ -27,4 +28,6 @@ com/university/academic/repository/EnrollmentRepository.class
 com/university/academic/model/ClassOffering.class
 com/university/academic/config/DataLoader.class
 com/university/academic/AcademicApplication.class
+com/university/academic/controller/ReportController.class
 com/university/academic/service/EnrollmentService.class
+com/university/academic/controller/EvaluationController.class
